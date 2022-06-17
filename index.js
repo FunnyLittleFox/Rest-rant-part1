@@ -2,6 +2,8 @@ require('dotenv').config() //must always be at top
 const express = require('express')
 const app = express()
 
+app.use('/places', require('./controllers/places'))
+
 app.get('/', function(req, res) {
     res.send("Hello World!") // this must be start for homepage any others must come after
 })
